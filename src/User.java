@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public  class User {
     private int id;
     private String firstName;
@@ -15,6 +17,15 @@ public  class User {
         this.products = products;
         this.id = idUserCount++;
     }
+
+    public User(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.id = idUserCount++;
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -64,6 +75,14 @@ public  class User {
         User.idUserCount = idUserCount;
     }
 
-
+    public void buyProduct(Product product){
+        if(products == null){
+            products = new Product[]{product};
+        }else {
+            Product[] newProducts = Arrays.copyOf(products, products.length+1);
+            newProducts[newProducts.length-1] = product;
+            products = newProducts;
+        }
+    }
 
 }

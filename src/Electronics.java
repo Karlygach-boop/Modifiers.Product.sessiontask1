@@ -5,7 +5,6 @@ public class Electronics extends Product{
     private String color;
     private  boolean isNew;
     private  int memory;
-    private static int productCount;
 
     public Electronics(String name, String description, int price, LocalDate createDate, String type,
                        int productCount, String brand, String color, boolean isNew, int memory) {
@@ -16,13 +15,6 @@ public class Electronics extends Product{
         this.memory = memory;
     }
 
-    public static int getProductCount() {
-        return productCount;
-    }
-
-    public static void setProductCount(int productCount) {
-        Electronics.productCount = productCount;
-    }
 
     public String getBrand() {
         return brand;

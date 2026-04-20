@@ -8,7 +8,7 @@ public class Product {
     private LocalDate createDate;
     private  String type;
     private static int idcount;
-    private static int productCount;
+    private  int productCount;
 
     public Product(String name, String description, int price, LocalDate createDate, String type, int productCount) {
         this.name = name;
@@ -72,11 +72,11 @@ public class Product {
         Product.idcount = idcount;
     }
 
-    public static int getProductCount() {
+    public  int getProductCount() {
         return productCount;
     }
 
-    public static void setProductCount(int productCount) {
-        Product.productCount = productCount;
+    public  void setProductCount(int productCount) {
+        this.productCount = productCount;
     }
 }
